@@ -1,0 +1,26 @@
+*{box-sizing:border-box;}html,body{height:100%;margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial;}
+#app{display:grid;grid-template-columns:250px 1fr;height:100vh;background:#0b141a;}
+.sidebar{background:#111b21;color:#e9edef;display:flex;flex-direction:column;border-right:1px solid #222e35;}
+.sidebar-header{display:flex;align-items:center;justify-content:space-between;padding:16px;border-bottom:1px solid #222e35;}
+.brand{font-weight:700;}
+.me{font-size:12px;opacity:.8;}
+.chat-list{flex:1;overflow:auto;padding:10px;}
+.online-title{padding:10px 16px;font-size:12px;text-transform:uppercase;color:#8696a0;}
+.online-list{list-style:none;padding:0;margin:0;overflow:auto;}
+.online-list li,.chat-list li{padding:8px 12px;border-bottom:1px solid #222e35;cursor:pointer;}
+.online-list li .name,.chat-list li .name{color:#e9edef;}
+.chat{display:grid;grid-template-rows:auto 1fr auto;}
+.chat-header{background:#222e35;color:#e9edef;display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid #111b21;}
+.chat-title{display:flex;flex-direction:column;}
+.chat-title small{color:#8696a0;}
+.login input{background:#202c33;border:1px solid #2a3942;color:#e9edef;padding:6px 8px;border-radius:8px;margin-right:6px;}
+.login button{background:#00a884;border:none;padding:6px 10px;border-radius:8px;color:#012a21;font-weight:700;cursor:pointer;margin-right:4px;}
+.error{color:#ff6b6b;font-size:12px;margin-left:8px;}
+.messages{list-style:none;padding:16px;margin:0;overflow-y:auto;display:flex;flex-direction:column;gap:6px;background:#0b141a;}
+.msg{max-width:70%;padding:8px 10px;border-radius:10px;background:#202c33;color:#e9edef;position:relative;}
+.msg.me{align-self:flex-end;background:#005c4b;}
+.msg .meta{font-size:11px;color:#b6c2c9;opacity:.8;margin-top:2px;}
+.composer{display:flex;gap:8px;padding:10px;background:#111b21;border-top:1px solid #222e35;}
+.composer input{flex:1;background:#202c33;border:1px solid #2a3942;color:#e9edef;padding:10px 12px;border-radius:18px;}
+.composer button{background:#00a884;border:none;padding:10px 16px;border-radius:18px;color:#012a21;font-weight:700;cursor:pointer;}
+@media (max-width:860px){#app{grid-template-columns:1fr;}.sidebar{display:none;}}
