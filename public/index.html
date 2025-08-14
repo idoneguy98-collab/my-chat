@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Чат друзей</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="app">
+    <div class="sidebar">
+      <div class="sidebar-header">
+        <div class="brand">Мой чат</div>
+        <div class="me" id="me"></div>
+      </div>
+      <div class="search-wrap">
+        <input id="room" placeholder="Комната (опц.)" />
+        <button id="joinRoomBtn" title="Пока общая комната">Ок</button>
+      </div>
+      <div class="online-title">Онлайн</div>
+      <ul id="onlineList" class="online-list"></ul>
+    </div>
+
+    <div class="chat">
+      <div class="chat-header">
+        <div class="chat-title">
+          <span>Общий чат</span>
+          <small id="usersCount"></small>
+        </div>
+        <div class="login" id="loginForm">
+          <input id="name" placeholder="Имя" />
+          <input id="pass" placeholder="Пароль" type="password" />
+          <button id="loginBtn">Войти</button>
+          <div id="err" class="error"></div>
+        </div>
+      </div>
+
+      <ul id="messages" class="messages"></ul>
+
+      <div class="composer">
+        <input id="msg" placeholder="Напишите сообщение..." disabled />
+        <button id="sendBtn" disabled>Отправить</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
